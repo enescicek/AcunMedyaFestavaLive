@@ -1,0 +1,33 @@
+﻿@model List<AcunMedyaFestavaLive.Entities.Ticket>
+
+@{
+    Layout = null;
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<div class="container">
+    <br /><br />
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Bilet Türü</th>
+            <th>Bilet Fiyatı</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+            <th>Detaylar</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.TicketId</td>
+                <td>@item.Title</td>
+                <td>@item.Price</td>
+                <td><a href="/Admin/Ticket/DeleteTicket/@item.TicketId" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Admin/Ticket/UpdateTicket/@item.TicketId" class="btn btn-success">Güncelle</a></td>
+                <td><a href="#" class="btn btn-dark">Detaylar</a></td>
+            </tr>
+        }
+
+    </table>
+    <a href="/Admin/Ticket/CreateTicket/" class="btn btn-info">Bileti Güncelle</a>
+
+</div>

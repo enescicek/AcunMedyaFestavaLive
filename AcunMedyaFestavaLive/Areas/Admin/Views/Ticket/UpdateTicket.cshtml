@@ -1,0 +1,41 @@
+﻿@model AcunMedyaFestavaLive.Entities.Ticket
+@{
+    Layout = null;
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<div class="container">
+    <br /><br />
+    <h3>Bilet Güncelleme Sayfası</h3>
+    <form method="post">
+        @Html.HiddenFor(x => x.TicketId)
+        <label>Bilet Başlığı</label>
+        @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+        <br />
+        <label>Bilet Açıklaması</label>
+        @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+        <br />
+        <label>Bilet Fiyatı</label>
+        @Html.TextBoxFor(x => x.Price, new { @class = "form-control" })
+        <br />
+        <label>Nitelik 1</label>
+        @Html.TextBoxFor(x => x.TicketProperty1, new { @class = "form-control" })
+        <br />
+        <label>Nitelik 2</label>
+        @Html.TextBoxFor(x => x.TicketProperty2, new { @class = "form-control" })
+        <br />
+        <label>Nitelik 3</label>
+        @Html.TextBoxFor(x => x.TicketProperty3, new { @class = "form-control" })
+        <br />
+        <label>Nitelik 4</label>
+        @Html.TextBoxFor(x => x.TicketProperty4, new { @class = "form-control" })
+        <br />
+        <label>Nitelik 5</label>
+        @Html.TextBoxFor(x => x.TicketProperty5, new { @class = "form-control" })
+        <br />
+        <label>Nitelik 6</label>
+        @Html.TextBoxFor(x => x.TicketProperty6, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-primary">Bileti Oluştur</button>
+    </form>
+</div>

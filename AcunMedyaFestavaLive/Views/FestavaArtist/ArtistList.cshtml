@@ -1,0 +1,53 @@
+﻿@model List<AcunMedyaFestavaLive.Entities.Artist>
+@{ Layout = "~/Views/Shared/UILayout.cshtml"; }
+
+<section class="artists-section section-padding" id="section_3">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <h1 class="mb-4">Festival Sanatçılarımız</h1>
+            </div>
+
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="artists-thumb">
+                        <div class="artists-image-wrap">
+                            <img src="@item.ImageUrl" style="width:600px;height:350px"
+                                 class="artists-image img-fluid">
+                        </div>
+
+                        <div class="artists-hover">
+                            <p>
+                                <strong>Etkinlik Adı:</strong>
+                                @item.NameSurname
+                            </p>
+
+                            <p>
+                                <strong>Tarih ve Saat:</strong>
+                                @item.Date
+                            </p>
+
+                            <p>
+                                <strong>Açıklama:</strong>
+                                @item.Description
+                            </p>
+
+                            <hr>
+
+                            <p class="mb-0">
+                                <strong>Detaylı Açıklama:</strong>
+                                <a href="#">@item.Description2</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+
+            
+
+        </div>
+    </div>
+</section>
